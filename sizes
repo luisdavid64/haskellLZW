@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Checks the sizes of filed in a directory that are not haskell files
+# Checks the sizes of files in a directory, excluding haskell files.
 
 ls -l | awk '$9 !~ /.*\.hs/ && $9 !~ /sizes/ {print $9, int(($5/1024)+0.5) " Megas"}'
 
